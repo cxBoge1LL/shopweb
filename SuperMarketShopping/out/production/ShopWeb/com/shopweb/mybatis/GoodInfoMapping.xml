@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.shopweb.dao.IGoodInfoDao">
+    <select id="queryAllGoodInfo" resultType="com.shopweb.bean.GoodInfo">
+        SELECT product_id,bar_code, type,product_name, retail_price, product_standard, unit,
+        purchase_price, expiration_date, repertory
+        FROM good_list
+    </select>
+    <select id="queryGoodInfoByName" resultType="com.shopweb.bean.GoodInfo" parameterType="string">
+        SELECT
+        product_id,
+        bar_code,
+        type,
+        product_name,
+        retail_price,
+        product_standard,
+        unit,
+        purchase_price,
+        expiration_date,
+        repertory
+        FROM good_list
+        WHERE 1=1
+        AND
+        CONCAT(IFNULL(`product_id`,''),
+        IFNULL(`type`,''),
+        IFNULL(`product_name`,''))
+        LIKE '%' #{name} '%'
+    </select>
+
+    <insert id="addGoodInfo" parameterType="com.shopweb.bean.GoodInfo">
+      INSERT INTO good_list(
+        product_id,
+        bar_code,
+        type,
+        product_name,
+        retail_price,
+        product_standard,
+        unit,
+        purchase_price,
+        expiration_date,
+        repertory
+      ) VALUES (
+        #{product_id},
+        #{bar_code},
+        #{type},
+        #{product_name},
+        #{retail_price},
+        #{product_standard},
+        #{unit},
+        #{purchase_price},
+        #{expiration_date},
+        #{repertory}
+      )
+
+    </insert>
+    <delete id="deleteMore" parameterType="java.util.List">
+        DELETE FROM good_list
+        WHERE IFNULL(`product_id`,'')
+        AND product_id IN (
+        <foreach collection="list" item="item" separator=",">
+            #{item}
+        </foreach>
+        )
+    </delete>
+    <update id="updateGood" parameterType="com.shopweb.bean.GoodInfo">
+        UPDATE good_list
+        SET
+        bar_code=#{bar_code},
+        type=#{type},
+        product_name=#{product_name},
+        retail_price=#{retail_price},
+        product_standard=#{product_standard},
+        unit=#{unit},
+        purchase_price=#{purchase_price},
+        expiration_date=#{expiration_date},
+        repertory=#{repertory}
+        WHERE
+        1=1
+        AND
+        product_id=#{product_id}
+    </update>
+</mapper>

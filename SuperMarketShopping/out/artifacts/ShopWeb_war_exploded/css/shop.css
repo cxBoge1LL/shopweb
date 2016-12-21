@@ -1,0 +1,207 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	background-color: darkkhaki;
+}
+
+a {
+	text-decoration: none;
+	color: dodgerblue;
+	text-align: center;
+}
+
+button {
+	color: white;
+	border-radius: 5px;
+	background-color: dodgerblue;
+	border-color: darkred;
+}
+
+.divleft {
+	text-align: center;
+	border-radius: 5px 0 0 5px;
+	float: left;
+	background-color: darkred;
+	width: 500px;
+	height: 600px;
+	display: none;
+}
+
+.divleft2 {
+	display: block;
+}
+
+.divtop {
+	border-radius: 5px 5px 0 0;
+	float: left;
+	background-color: darkred;
+	width: 1200px;
+	height: 40px;
+}
+
+.divright {
+	overflow:scroll;
+	overflow-x: hidden;
+	border-radius: 5px 5px 0 0;
+	float: left;
+	background-color: antiquewhite;
+	width: 1200px;
+	height: 500px;
+	scrollbar-face-color:salmon;
+	scrollbar-shadow-color: salmon;
+	scrollbar-highlight-color: antiquewhite;
+	scrollbar-3dlight-color: antiquewhite;
+	scrollbar-darkshadow-color: antiquewhite;
+	scrollbar-track-color:antiquewhite;
+	scrollbar-arrow-color: antiquewhite;
+	/*scrollbar-face-color 滚动条凸出部分的颜色
+scrollbar-shadow-color 立体滚动条阴影的颜色
+scrollbar-highlight-color 滚动条空白部分的颜色
+scrollbar-3dlight-color 滚动条亮边的颜色
+scrollbar-darkshadow-color 滚动条强阴影的颜色
+scrollbar-track-color 滚动条的背景颜色
+scrollbar-arrow-color 上下按钮上三角箭头的颜色
+scrollbar-base-color  滚动条的基本颜色*/
+}
+
+.divrightwidth {
+	width: 700px;
+}
+
+.divbottom {
+	border-radius: 0px 0px 5px 5px;
+	float: right;
+	width: 1200px;
+	height: 60px;
+	background-color: darkred;
+}
+
+.divrightwidth {
+	width: 699.9px;
+}
+
+.outer {
+	padding-top: 10px;
+	border-radius: 8px;
+	width: 1200px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+.divleft table {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	vertical-align: middle;
+}
+
+.divleft tr {
+	color: white;
+	text-align: center;
+}
+
+.divleft input {
+	text-align: center;
+	border: none;
+	border-radius: 4px;
+	height: 27px;
+}
+
+.find {
+	width: 120px;
+	height:26px;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.input_1 {
+	text-align: center;
+	border: none;
+	border-radius: 4px;
+	height: 27px;
+	width: 100px;
+}
+
+.selected_1 {
+	color: saddlebrown;
+	width: 40px;
+	height: 27px;
+	border-radius: 5px;
+	background: url(../img/selected.png) no-repeat scroll right center transparent;
+	background-size: 20px 20px;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background-color: white;
+	border-bottom-color: white;
+}
+
+.selected_2 {
+	color: saddlebrown;
+	width: 141px;
+	height: 27px;
+	text-align: center;
+	border-radius: 5px;
+	background: url(../img/selected.png) no-repeat scroll right center transparent;
+	background-size: 27px 27px;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background-color: white;
+	border-bottom-color: white;
+}
+
+.divbottom ul li {
+	width: 120px;
+	float: right;
+	text-align: center;
+	line-height: 60px;
+	background-color: darkred;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.divbottom ul {
+	list-style-type: none;
+}
+
+.divright table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.divtop table {
+	width: 100%;
+	border-collapse: collapse;
+	line-height: 40px;
+}
+
+.divtop table th {
+	text-align: center;
+	color: ghostwhite;
+}
+
+.divright table td {
+	padding: 5px;
+	vertical-align: middle;
+	text-align: center;
+	border-top: 1px solid #a5a6a3;
+	border-bottom: 1px solid #a5a6a3;
+	word-break: break-all;
+}
+
+.sub {
+	display: none;
+}
+
+span{
+	color: steelblue;
+}
+
+input[type=checkbox]{
+	width: 20px;
+	height: 20px;
+}
